@@ -4,4 +4,6 @@ const urlController = require('../controllers/urlController');
 
 App.get('/', urlController.mainPage_get);
 
+App.get('/utube', urlController.redirect_url);
+
 module.exports = App;
