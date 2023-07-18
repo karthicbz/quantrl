@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,11 +18,17 @@
         <div id="url-input">
             <form action="" method="post">
                 <input type="text" name="bigurl" id="bigurl">
-                <button type="submit">Quantrl</button>
+                <button type="submit" id="submit-button">Quantrl</button>
             </form>
         </div>
         <div id="new-quantrl">
-            <p>Your quantrl will appear here</p>
+            <ul id="error-list">
+                <% if(typeof(errors) !== 'undefined'){ %>
+                    <% errors.map(error=>{ %>
+                        <li><%=error.msg%></li>
+                    <% }) %>
+                <% } %>
+            </ul>
         </div>
     </section>
     <footer id="footer">

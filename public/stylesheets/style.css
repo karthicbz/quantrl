@@ -79,3 +79,14 @@ form>button{
 form>button:hover{
   cursor: pointer;
 }
+
+#new-quantrl{
+  background: rgb(146, 93, 60);
+  padding: 3rem;
+  align-self: self-start;
+  border-radius: 1rem;
+  color: rgb(238, 216, 201);
+  max-width: 700px;
+  opacity: 0;
+  transition: opacity ease-in 0.8s;
+}
