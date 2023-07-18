@@ -15,9 +15,7 @@ exports.urlToQuantrl_post = [
     .isURL({require_protocol:true, require_host:true}).withMessage('Not a valid url'),
     asynchandler(async(req, res)=>{
         const errors = validationResult(req);
-        // const hashIds = new HashIds(process.env.SALT, 10);
         const hash = stringHash.encode(req.body.bigurl, process.env.SALT);
-        // const quantrlUrl = await hashIds.encode(req.body.bigurl);
         const newQuantrl = new UrlModel({
             url:req.body.bigurl,
             quantrl: hash,
