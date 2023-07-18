@@ -21,18 +21,25 @@
                 <button type="submit" id="submit-button">Quantrl</button>
             </form>
         </div>
-        <div id="new-quantrl">
-            <ul id="error-list">
-                <% if(typeof(errors) !== 'undefined'){ %>
-                    <% errors.map(error=>{ %>
-                        <li><%=error.msg%></li>
-                    <% }) %>
-                <% } %>
-            </ul>
+        <div id="quantrl-section">
+            <% if(typeof(quantrlDetails) === 'undefined'){ %>
+                <ul id="error-list">
+                    <% if(typeof(errors) !== 'undefined'){ %>
+                        <% errors.map(error=>{ %>
+                            <li><%=error.msg%></li>
+                        <% }) %>
+                    <% } %>
+                </ul>
+            <% }else{ %>
+                <div id="new-quantrl">
+                    <p>Your new quantrl</p>
+                    <a href="/quantrl/<%=quantrlDetails%>">http://localhost:3000/quantrl/<%= quantrlDetails %></a>
+                </div>
+            <%}%>
         </div>
     </section>
     <footer id="footer">
-        <p>Made with love by karthicbz</p>
+        <p>Made with 🤎 by karthicbz</p>
     </footer>
 </body>
 </html>

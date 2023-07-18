@@ -61,12 +61,23 @@ body{
   display: grid;
   align-items: end;
   justify-items: center;
+  color: rgb(238, 216, 201);
+  padding-bottom: 8px;
 }
 
 form>input, form>button{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 8px 12px;
   border-radius: 50px;
+}
+
+form>input{
+  border: none;
+}
+
+form>input:focus{
+  outline: none;
+  border: 2px dashed rgb(146, 93, 60);
 }
 
 form>button{
@@ -80,7 +91,7 @@ form>button:hover{
   cursor: pointer;
 }
 
-#new-quantrl{
+#quantrl-section{
   background: rgb(146, 93, 60);
   padding: 3rem;
   align-self: self-start;

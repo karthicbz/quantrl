@@ -6,6 +6,6 @@ App.get('/', urlController.mainPage_get);
 
 App.post('/', urlController.urlToQuantrl_post);
 
-App.get('/utube', urlController.redirect_url);
+App.get('/:quantrl', urlController.redirect_url);
 
 module.exports = App;
